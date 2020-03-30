@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="borderid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainfileController">
+   <center>
+      <MediaView fx:id="mv" fitHeight="250.0" fitWidth="500.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="602.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="603.0">
+                     <children>
+                        <Box />
+                        <Slider fx:id="currentpos" prefHeight="29.0" prefWidth="589.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Slider>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Box />
+                        <Button mnemonicParsing="false" onAction="#play" prefHeight="31.0" prefWidth="42.0" text="I&gt;" />
+                        <Button mnemonicParsing="false" onAction="#pause" text="II" />
+                        <Button mnemonicParsing="false" onAction="#speed" prefHeight="31.0" prefWidth="57.0" text="~~~" />
+                        <Button mnemonicParsing="false" onAction="#normal" prefHeight="31.0" prefWidth="46.0" text="~~" />
+                        <Button mnemonicParsing="false" onAction="#slow" prefHeight="31.0" prefWidth="36.0" text="~" />
+                        <Button mnemonicParsing="false" onAction="#reload" prefHeight="31.0" prefWidth="42.0" text="&lt;-" />
+                        <Button mnemonicParsing="false" onAction="#start" prefHeight="31.0" prefWidth="61.0" text="&lt;- I&gt;" />
+                        <Button mnemonicParsing="false" onAction="#last" text="[]" />
+                        <Slider fx:id="volumeSlider" />
+                        <VBox prefHeight="50.0" prefWidth="153.0">
+                           <children>
+                              <TextField />
+                              <Button fx:id="directorybutton" mnemonicParsing="false" onAction="#buttonscript" text="directory">
+                                 <VBox.margin>
+                                    <Insets left="40.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
